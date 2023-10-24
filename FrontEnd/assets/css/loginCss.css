@@ -1,0 +1,109 @@
+/*=========================loging form=======================*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+    background-image: url('../images/car-rental.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    height: 390px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: #2eca6a;
+}
+
+#google:hover{
+    color: #ff253a;
+}
+#twitter:hover{
+    color: #1e90ff;
+
+}
+.social_icon span:hover{
+    color: #0a58ca;
+    cursor: pointer;
+}
+
+.card-header h3{
+    color: white;
+}
+
+.social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    margin-top: 30px;
+    background-color: #2eca6a;
+    color: black;
+    border:0 !important;
+}
+
+input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+    color: white;
+    margin-top: 30px;
+}
+
+.remember input
+{
+    width: 20px;
+    height: 20px;
+    /*margin-top: 30px;*/
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn{
+    font-weight: bold;
+    color: black;
+    background-color: #2eca6a;
+    width: 100px;
+}
+
+.login_btn:hover{
+    color: black;
+    background-color: #ffca2c;
+}
+
+.links{
+    color: #000000;
+}
+
+.links a{
+    margin-left: 4px;
+}
+
+#sign{
+    color: #eeeeee;
+}
+
+#forgot{
+    color: #1e90ff;
+}
