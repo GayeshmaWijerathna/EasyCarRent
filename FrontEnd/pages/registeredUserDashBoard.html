@@ -28,7 +28,8 @@
 
     <!-- Template Dashboard CSS File -->
     <link rel="stylesheet" href="../assets/css/Style.css">
-    <link rel="stylesheet" href="../assets/css/Style2.css">
+<!--    <link rel="stylesheet" href="../assets/css/Style2.css">-->
+    <link rel="stylesheet" href="../assets/css/Dashboard.css">
 
 </head>
 <body>
@@ -36,9 +37,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="registeredUserDashBoard.html" class="logo d-flex align-items-center">
-            <span class="d-none d-lg-block">Easy <span>Car</span></span>
-        </a>
+        <h1 class="logo d-flex align-items-center me-auto me-lg-0" style="color: #0b0352;">EASY<span style="color: #ff253a">Car</span></h1>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
@@ -54,13 +53,13 @@
             <li class="nav-item dropdown pe-3">
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="../assets/img/massage/profile-img.jpg" alt="Profile" class="rounded-circle">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">K.L Nimal</span>
+                    <img src="../assets/images/Users/kavishk.jpeg" alt="Profile" class="rounded-circle">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">K.Indeepa</span>
                 </a><!-- End Profile Iamge Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6>K.L Nimal</h6>
+                        <h6>K.Indeepa</h6>
                         <span>User</span>
                     </li>
                     <li>
@@ -148,7 +147,7 @@
                 <span>Booking Response</span>
             </a>
         </li>
-        <!-- End Rent Nav -->
+        <!-- End booking Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="login.html">
@@ -179,7 +178,7 @@
             <div class="row mt-3">
                 <div class="card info-card">
 
-                    <!-- start button content-->
+                    <!--start button content-->
                     <div class="mb-3 mt-5 d-grid gap-1 d-md-flex justify-content-md-center">
                         <form>
                             <div class="col col-lg-12 col-sm-8">
@@ -194,9 +193,9 @@
                             Delete Rental
                         </button>
                     </div>
-                    <!-- end button content-->
+                    <!--end button content-->
 
-                    <!-- start response table content-->
+                    <!--start response table content-->
                     <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 350px;">
                         <div class="col-11 justify-content-around sectionBorder"
                              style="height: 290px; background: white">
@@ -235,7 +234,7 @@
                 <div class="card info-card">
                     <div class="col col-lg-12">
                         <div class="row col-12 m-2 p-2  justify-content-lg-center">
-                            <di class="row col-lg-6 gap-3 gap-lg-0 col-md-5 col-sm-6 col-xs-3 justify-content-md-around">
+                            <div class="row col-lg-6 gap-3 gap-lg-0 col-md-5 col-sm-6 col-xs-3 justify-content-md-around">
                                 <div class="col-lg-6">
                                     <label class="form-label" for="rent_Id">Rent Id</label>
                                     <input type="text" name="rent_Id" class="form-control" id="rent_Id"
@@ -246,7 +245,7 @@
                                     <input type="text" name="user_Id" class="form-control" id="user_Id"
                                            readonly placeholder="C00-001">
                                 </div>
-                            </di>
+                            </div>
                             <div class="row col-lg-6 gap-3 gap-lg-0 d-flex col-md-5 col-sm-6 col-xs-3 justify-content-md-around">
                                 <div class="col-lg-6">
                                     <label class="form-label" for="category_type">Category</label>
@@ -530,12 +529,13 @@
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
-    <div class="copyright">
-        &copy; Copyright <strong><span>Easy Car Rent</span></strong>. All Rights Reserved
+    <div class="container ">
+        <div class="copyright ">&copy; Copyright <strong><span>Easy Car</span></strong>. All Rights Reserved.</div>
+        <div class="credits ">
+            Designed by <a href="https://gayeshmawijerathna.github.io/MyPortfolio/ " target="_blank " style="font-size: 12px"><span style="font-weight: bold">Gayeshma Wijayarathna </span><span style="font-style: italic">(be half of Dark Town Software Solutions).</span></a>
+        </div>
     </div>
-    <div class="credits">
-        Designed by <a href="">Nimesh Piyumantha</a>
-    </div>
+
 </footer>
 <!-- End Footer -->
 
@@ -560,7 +560,6 @@
 <!-- Util JS File -->
 <script src="../util/alert.js" rel="script"></script>
 <script src="../util/validation.js" rel="script"></script>
-
 <script>
     $(document).ready(function () {
         $("#bookingResponse").css('display', 'block');

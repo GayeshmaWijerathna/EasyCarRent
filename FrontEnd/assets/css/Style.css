@@ -1242,7 +1242,7 @@ section {
 .Register-customer-new .reg-customer-form .loading:before {
     content: "";
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 10%;
     width: 24px;
     height: 24px;
     margin: 0 10px -6px 0;
@@ -1294,6 +1294,7 @@ section {
 
 .Register-customer-new .reg-customer-form button[type=button]:hover {
     background: #ff003b;
+
 }
 
 @-webkit-keyframes animate-loading {
@@ -1652,8 +1653,7 @@ img.hover-shadow {
     background: -webkit-linear-gradient(to right, #642c2c, #432021, #0F2027);
 
     background: linear-gradient(to right, rgb(5, 150, 82), #047640, #0F2027);
-
-    padding: 50px 0;
+    padding: 34px 0;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1674,7 +1674,7 @@ img.hover-shadow {
 .text {
     font-size: 18px;
     position: relative;
-    padding-bottom: 26px;
+    padding-bottom: 15px;
     color: #000000;
 }
 
@@ -1725,18 +1725,17 @@ img.hover-shadow {
 
 .footer .social-links a:hover {
     color: #fff;
-    border-color: #ee1212;
+    border-color: #1e90ff;
 }
 
-/*.footer .copyright {*/
-/*    text-align: right;*/
-/*    padding-top: 30px;*/
-/*    border-top: 1px solid rgb(11, 0, 149);*/
-/*}*/
+.footer .copyright {
+    text-align: center;
+    padding-top: 40px;
+}
 
 .footer .credits {
     padding-top: 4px;
-    text-align: start;
+    text-align: center;
     font-size: 13px;
 }
 

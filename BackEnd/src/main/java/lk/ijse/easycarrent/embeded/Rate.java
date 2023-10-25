@@ -1,0 +1,18 @@
+package lk.ijse.easycarrent.embeded;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@ToString
+public class Rate {
+    private double dailyRate;
+    private double monthlyRate;
+}
