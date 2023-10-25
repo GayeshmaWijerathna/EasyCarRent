@@ -16,7 +16,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!--Custom styles-->
+    <link href="../assets/vendor/styleslog/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/loginCss.css">
+
+    <!--    <script src="../assets/js/js1.js"></script>-->
 </head>
 <body>
 <div class="container">
@@ -32,6 +35,15 @@
             </div>
             <div class="card-body">
                 <form>
+                    <div class="form-group">
+                        <select class="form-control" id="role_Type" name="role_Type" style="border-radius: 30px;height: 3.5em">
+                            <option value="RoleType">Choose Role</option>
+                            <option value="ADMIN">ADMIN</option>
+                            <option value="REGISTERED_USER">REGISTERED_USER</option>
+                            <option value="DRIVER">DRIVER</option>
+                        </select>
+                    </div>
+
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -64,5 +76,7 @@
         </div>
     </div>
 </div>
+
+<script src="../controller/LoginController.js"></script>
 </body>
 </html>

@@ -43,7 +43,7 @@ html,body{
 }
 
 .card-header h3{
-    color: white;
+    color: black;
 }
 
 .social_icon{
@@ -54,7 +54,6 @@ html,body{
 
 .input-group-prepend span{
     width: 50px;
-    margin-top: 30px;
     background-color: #2eca6a;
     color: black;
     border:0 !important;
@@ -101,7 +100,7 @@ input:focus{
 }
 
 #sign{
-    color: #eeeeee;
+    color: #0a58ca;
 }
 
 #forgot{

@@ -799,6 +799,7 @@ form .btn {
     background-color: #4154f1;
 }
 
+
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
@@ -971,7 +972,7 @@ form .btn {
     padding-bottom: 20px;
 }
 
-.dashboard .activity .activity-item:first-child .activity-label::before {
+.dashboard .activity .activity-item:first-child .activite-label::before {
     top: 5px;
 }
 
@@ -980,30 +981,8 @@ form .btn {
 }
 
 .sectionBorder {
-    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(73, 226, 226, 0.22) 0 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
     border-radius: 8px;
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.footer {
-    padding: 20px 0;
-    font-size: 14px;
-    transition: all 0.3s;
-    border-top: 1px solid #cddfff;
-}
-
-.footer .copyright {
-    text-align: left;
-    color: #ffffff;
-}
-
-.footer .credits {
-    padding-top: 5px;
-    text-align: left;
-    font-size: 13px;
-    color: #021b45;
 }
 
 /*------------------------------ Swiper ------------------------*/
