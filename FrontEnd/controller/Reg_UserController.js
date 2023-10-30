@@ -59,10 +59,10 @@ function generateCustomerID() {
 /**
  * clear input fields Values Method
  * */
-function setTextFieldValues(firstName, lastName, contact_No, address, email, nic, license_No, nic_Img, license_Img, user_Name, password) {
+function setTextFieldValues(firstName, lastName, contactNo, address, email, nic, license_No, nic_Img, license_Img, user_Name, password) {
     $("#firstName").val(firstName);
     $("#lastName").val(lastName);
-    $("#contact_No").val(contact_No);
+    $("#contact_No").val(contactNo);
     $("#address").val(address);
     $("#email").val(email);
     $("#nic").val(nic);
