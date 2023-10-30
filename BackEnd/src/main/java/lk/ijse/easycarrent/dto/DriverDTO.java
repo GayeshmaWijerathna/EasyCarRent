@@ -16,12 +16,12 @@ import org.springframework.web.multipart.MultipartFile;
 public class DriverDTO {
     private String userId;
     private Name name;
-    private String contact_No;
+    private String contactNo;
     private String address;
     private String email;
-    private String nic_No;
-    private String license_No;
-    private MultipartFile license_Img;
+    private String nicNo;
+    private String licenseNo;
+    private MultipartFile licenseImg;
     private AvailabilityType driverAvailability;
 
     private UserDTO user;

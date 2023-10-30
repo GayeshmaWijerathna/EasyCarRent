@@ -31,7 +31,7 @@ public class Rent {
     private String location;
 
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "userID", referencedColumnName = "user_Id", nullable = false)
+    @JoinColumn(name = "userID", referencedColumnName = "userId", nullable = false)
     private Reg_User regUser;
 
     @OneToMany(mappedBy = "rent", cascade = CascadeType.ALL)

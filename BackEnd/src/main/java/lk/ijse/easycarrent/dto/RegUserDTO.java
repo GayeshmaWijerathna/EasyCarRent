@@ -14,15 +14,15 @@ import org.springframework.web.multipart.MultipartFile;
 @AllArgsConstructor
 @ToString
 public class RegUserDTO {
-    private String user_Id;
+    private String userId;
     private Name name;
-    private String contact_No;
+    private String contactNo;
     private String address;
     private String email;
     private String nic;
-    private String license_No;
-    private MultipartFile nic_Img;
-    private MultipartFile license_Img;
+    private String licenseNo;
+    private MultipartFile nicImg;
+    private MultipartFile licenseImg;
 
     private UserDTO user;
 

@@ -15,7 +15,7 @@ import javax.persistence.*;
 @ToString
 public class Admin {
     @Id
-    private String user_Id;
+    private String userId;
 
     @Embedded
     private Name name;
