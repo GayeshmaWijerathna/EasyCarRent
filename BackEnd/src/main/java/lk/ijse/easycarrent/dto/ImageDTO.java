@@ -1,4 +1,4 @@
-package lk.ijse.easycarrent.embeded;
+package lk.ijse.easycarrent.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,6 @@
 package lk.ijse.easycarrent.dto;
 
 
-import lk.ijse.easycarrent.embeded.ImageDTO;
 import lk.ijse.easycarrent.embeded.Rate;
 import lk.ijse.easycarrent.enums.AvailabilityType;
 import lk.ijse.easycarrent.enums.CarType;

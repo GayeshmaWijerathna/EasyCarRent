@@ -2,7 +2,7 @@ package lk.ijse.easycarrent.controller;
 
 import lk.ijse.easycarrent.dto.CarDTO;
 import lk.ijse.easycarrent.dto.CustomDTO;
-import lk.ijse.easycarrent.embeded.ImageDTO;
+import lk.ijse.easycarrent.dto.ImageDTO;
 import lk.ijse.easycarrent.embeded.Rate;
 import lk.ijse.easycarrent.entity.Car;
 import lk.ijse.easycarrent.service.CarService;

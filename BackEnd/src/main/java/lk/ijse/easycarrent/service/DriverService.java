@@ -7,9 +7,9 @@ import lk.ijse.easycarrent.entity.Driver;
 import java.util.ArrayList;
 
 public interface DriverService {
-    void saveDriver(DriverDTO dto);
-    void updateDriver(DriverDTO dto);
-    void deleteDriver(String reg_ID);
+   public void saveDriver(DriverDTO dto);
+   public void updateDriver(DriverDTO dto);
+   public void deleteDriver(String reg_ID);
     ArrayList<DriverDTO> getAllDrivers();
     ArrayList<DriverDTO> getAllAvailableDrivers();
     CustomDTO userIdGenerate();
