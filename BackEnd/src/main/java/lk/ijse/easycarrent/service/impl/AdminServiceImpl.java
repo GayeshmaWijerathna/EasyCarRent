@@ -23,31 +23,31 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public void saveAdmin(AdminDTO dto) {
-     if (repo.existsById(dto.getUserId())){
-         throw new RuntimeException("Admin Already Exists!! Please Add New ID");
-     }
-     repo.save(mapper.map(dto, Admin.class));
-    }
-
-    @Override
-    public void updateAdmin(AdminDTO dto) {
-    if (!repo.existsById(dto.getUserId())){
-        throw new RuntimeException("ID Not in the System. Please Enter Valid ID !");
-    }
+        if (repo.existsById(dto.getUserId())) {
+            throw new RuntimeException("Admin Already Exist. Please enter another id..!");
+        }
         repo.save(mapper.map(dto, Admin.class));
     }
 
     @Override
-    public void deleteAdmin(String reg_ID) {
-        if (!repo.existsById(reg_ID)){
-            throw new RuntimeException("Wrong ID.. Please Check Again..!");
+    public void updateAdmin(AdminDTO dto) {
+        if (!repo.existsById(dto.getUserId())) {
+            throw new RuntimeException("Admin Not Exist. Please enter Valid id..!");
         }
-        repo.deleteById(reg_ID);
+        repo.save(mapper.map(dto, Admin.class));
+    }
+
+    @Override
+    public void deleteAdmin(String regID) {
+        if (!repo.existsById(regID)) {
+            throw new RuntimeException("Wrong ID..Please enter valid id..!");
+        }
+        repo.deleteById(regID);
     }
 
     @Override
     public ArrayList<AdminDTO> getAllAdmin() {
-        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Admin>>(){
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Admin>>() {
         }.getType());
     }
 }

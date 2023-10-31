@@ -9,6 +9,7 @@ import lk.ijse.easycarrent.enums.Transmission;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.awt.*;
@@ -17,6 +18,7 @@ import java.awt.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Car {
     @Id
    private String carId;

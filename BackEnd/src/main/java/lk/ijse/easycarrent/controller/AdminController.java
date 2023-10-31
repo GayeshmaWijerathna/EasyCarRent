@@ -1,5 +1,6 @@
 package lk.ijse.easycarrent.controller;
 
+
 import lk.ijse.easycarrent.dto.AdminDTO;
 import lk.ijse.easycarrent.service.AdminService;
 import lk.ijse.easycarrent.util.ResponseUtil;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("/admin")
 public class AdminController {
-//    @Autowired
+    @Autowired
     private AdminService service;
 
     @ResponseStatus(HttpStatus.CREATED)

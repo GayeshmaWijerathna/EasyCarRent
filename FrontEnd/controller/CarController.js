@@ -1,5 +1,5 @@
 
-let carBaseUrl = "http://localhost:8080/Back_End_war/";
+let carBaseUrl = "http://localhost:8080/Back_End/";
 loadAllCars();
 
 $("#btnSaveCar").attr('disabled', true);
@@ -137,7 +137,7 @@ $("#search_Id").on("keypress", function (event) {
         var search = $("#search_Id").val();
         $("#carTable").empty();
         $.ajax({
-            url: carBaseUrl + "car/searchCar/?car_Id=" + search,
+            url: carBaseUrl + "car/searchCar/?carId=" + search,
             method: "GET",
             contentType: "application/json",
             dataType: "json",

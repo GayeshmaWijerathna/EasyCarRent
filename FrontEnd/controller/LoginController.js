@@ -1,4 +1,4 @@
-let baseUrlLogin = "http://localhost:8080/Back_End_war/";
+let baseUrlLogin = "http://localhost:8080/Back_End/";
 
 
 /**

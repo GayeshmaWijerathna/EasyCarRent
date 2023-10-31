@@ -1,5 +1,5 @@
 
-let baseUrlIncome = "http://localhost:8080/Back_End_war/";
+let baseUrlIncome = "http://localhost:8080/Back_End/";
 
 document.addEventListener("DOMContentLoaded", () => {
     /**

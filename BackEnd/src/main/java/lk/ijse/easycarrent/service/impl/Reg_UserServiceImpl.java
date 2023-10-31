@@ -10,12 +10,17 @@ import lk.ijse.easycarrent.service.Reg_UserService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
+
+@Service
+@Transactional
 public class Reg_UserServiceImpl implements Reg_UserService {
     @Autowired
     private Reg_UserRepo repo;

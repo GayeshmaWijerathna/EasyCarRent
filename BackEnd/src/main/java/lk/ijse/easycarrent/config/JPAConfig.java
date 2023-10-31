@@ -13,12 +13,14 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.sql.DriverManager;
+
 
 @Configuration
+@EnableTransactionManagement
 @PropertySource("classpath:application.properties")
 @EnableJpaRepositories(basePackages = "lk.ijse.easycarrent.repo")
 public class JPAConfig {
@@ -27,7 +29,7 @@ public class JPAConfig {
     private Environment environment;
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(DataSource source, JpaVendorAdapter adapter){
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource source, JpaVendorAdapter adapter){
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setPackagesToScan(environment.getRequiredProperty("property.entity"));
         factoryBean.setDataSource(source);

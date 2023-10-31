@@ -1,5 +1,5 @@
 
-let RentbaseUrl = "http://localhost:8080/Back_End_war/";
+let RentbaseUrl = "http://localhost:8080/Back_End/";
 loadAllRent();
 $("#updateCustomer").attr('disabled', true);
 /**

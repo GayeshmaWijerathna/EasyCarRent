@@ -1,5 +1,5 @@
 
-let userbasurl = "http://localhost:8080/Back_End_war/";
+let userbasurl = "http://localhost:8080/Back_End/";
 
 let user;
 

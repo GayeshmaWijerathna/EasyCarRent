@@ -1,5 +1,5 @@
 
-let userBaseUrl = "http://localhost:8080/Back_End_war/";
+let userBaseUrl = "http://localhost:8080/Back_End/";
 loadAllRegUsers();
 $("#btnSaveCustomer").attr('disabled', true);
 $("#btnUpdateCustomer").attr('disabled', true);
@@ -123,7 +123,7 @@ $("#search_Id").on("keypress", function (event) {
         var search = $("#search_Id").val();
         $("#customerTable").empty();
         $.ajax({
-            url: userBaseUrl + "reg_User/searchCustomer/?cus_Id="+ search,
+            url: userBaseUrl + "reg_User/searchCustomer/?cusId="+ search,
             method: "GET",
             contentType: "application/json",
             dataType: "json",
