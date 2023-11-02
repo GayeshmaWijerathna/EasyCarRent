@@ -30,8 +30,8 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void saveCar(CarDTO dto) {
-        Car car = new Car(dto.getCarId(), dto.getName(), dto.getBrand(), dto.getType(), new Image(), dto.getNumberOfPassengers(), dto.getTransmissionType(), dto.getFuelType(), dto.getRentDurationPrice(), dto.getPriceExtraKM(), dto.getRegistrationNumber(), dto.getFreeMileage(), dto.getColor(), dto.getVehicleAvailabilityType());
-        if (repo.existsById(dto.getCarId())) {
+        Car car = new Car(dto.getCar_Id(), dto.getName(), dto.getBrand(), dto.getType(), new Image(), dto.getNumber_Of_Passengers(), dto.getTransmission_Type(), dto.getFuel_Type(), dto.getRent_Duration_Price(), dto.getPrice_Extra_KM(), dto.getRegistration_Number(), dto.getFree_Mileage(), dto.getColor(), dto.getVehicleAvailabilityType());
+        if (repo.existsById(dto.getCar_Id())) {
             throw new RuntimeException("Car Already Exists..! Please Enter New ID..!");
         }
 
@@ -42,14 +42,14 @@ public class CarServiceImpl implements CarService {
             System.out.println(projectPath);
             uploadsDir.mkdir();
 
-            dto.getImage().getFrontView().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getFrontView().getOriginalFilename()));
-            dto.getImage().getBackView().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getBackView().getOriginalFilename()));
-            dto.getImage().getSideView().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getSideView().getOriginalFilename()));
+            dto.getImage().getFront_View().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getFront_View().getOriginalFilename()));
+            dto.getImage().getBack_View().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getBack_View().getOriginalFilename()));
+            dto.getImage().getSide_View().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getSide_View().getOriginalFilename()));
             dto.getImage().getInterior().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getInterior().getOriginalFilename()));
 
-            car.getImage().setFrontView("uploads/"+dto.getImage().getFrontView().getOriginalFilename());
-            car.getImage().setBackView("uploads/"+dto.getImage().getBackView().getOriginalFilename());
-            car.getImage().setSideView("uploads/"+dto.getImage().getSideView().getOriginalFilename());
+            car.getImage().setFront_View("uploads/"+dto.getImage().getFront_View().getOriginalFilename());
+            car.getImage().setBack_View("uploads/"+dto.getImage().getBack_View().getOriginalFilename());
+            car.getImage().setSide_View("uploads/"+dto.getImage().getSide_View().getOriginalFilename());
             car.getImage().setInterior("uploads/"+dto.getImage().getInterior().getOriginalFilename());
 
         } catch (IOException | URISyntaxException e) {
@@ -61,8 +61,8 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void updateCar(CarDTO dto) {
-        Car car = new Car(dto.getCarId(), dto.getName(), dto.getBrand(), dto.getType(), new Image(), dto.getNumberOfPassengers(), dto.getTransmissionType(), dto.getFuelType(), dto.getRentDurationPrice(), dto.getPriceExtraKM(), dto.getRegistrationNumber(), dto.getFreeMileage(), dto.getColor(), dto.getVehicleAvailabilityType());
-        if (!repo.existsById(dto.getCarId())) {
+        Car car = new Car(dto.getCar_Id(), dto.getName(), dto.getBrand(), dto.getType(), new Image(), dto.getNumber_Of_Passengers(), dto.getTransmission_Type(), dto.getFuel_Type(), dto.getRent_Duration_Price(), dto.getPrice_Extra_KM(), dto.getRegistration_Number(), dto.getFree_Mileage(), dto.getColor(), dto.getVehicleAvailabilityType());
+        if (!repo.existsById(dto.getCar_Id())) {
             throw new RuntimeException("Car Not Exist. Please enter Valid id..!");
         }
         try {
@@ -72,14 +72,14 @@ public class CarServiceImpl implements CarService {
             System.out.println(projectPath);
             uploadsDir.mkdir();
 
-            dto.getImage().getFrontView().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getFrontView().getOriginalFilename()));
-            dto.getImage().getBackView().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getBackView().getOriginalFilename()));
-            dto.getImage().getSideView().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getSideView().getOriginalFilename()));
+            dto.getImage().getFront_View().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getFront_View().getOriginalFilename()));
+            dto.getImage().getBack_View().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getBack_View().getOriginalFilename()));
+            dto.getImage().getSide_View().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getSide_View().getOriginalFilename()));
             dto.getImage().getInterior().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getImage().getInterior().getOriginalFilename()));
 
-            car.getImage().setFrontView("uploads/"+dto.getImage().getFrontView().getOriginalFilename());
-            car.getImage().setBackView("uploads/"+dto.getImage().getBackView().getOriginalFilename());
-            car.getImage().setSideView("uploads/"+dto.getImage().getSideView().getOriginalFilename());
+            car.getImage().setFront_View("uploads/"+dto.getImage().getFront_View().getOriginalFilename());
+            car.getImage().setBack_View("uploads/"+dto.getImage().getBack_View().getOriginalFilename());
+            car.getImage().setSide_View("uploads/"+dto.getImage().getSide_View().getOriginalFilename());
             car.getImage().setInterior("uploads/"+dto.getImage().getInterior().getOriginalFilename());
 
         } catch (IOException | URISyntaxException e) {
@@ -147,8 +147,8 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public ArrayList<CarDTO> filterCarDetails(String name, String fuelType, String type, String transmissionType) {
-        return mapper.map(repo.filterCarDetails(name,fuelType,type,transmissionType), new TypeToken<ArrayList<Car>>() {
+    public ArrayList<CarDTO> filterCarDetails(String name, String fuel_Type, String type, String transmission_Type) {
+        return mapper.map(repo.filterCarDetails(name,fuel_Type,type,transmission_Type), new TypeToken<ArrayList<Car>>() {
         }.getType());
     }
 }

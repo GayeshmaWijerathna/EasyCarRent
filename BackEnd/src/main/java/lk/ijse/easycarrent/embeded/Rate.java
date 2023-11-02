@@ -13,6 +13,6 @@ import javax.persistence.Embeddable;
 @Data
 @ToString
 public class Rate {
-    private double dailyRate;
-    private double monthlyRate;
+    private double daily_Rate;
+    private double monthly_Rate;
 }

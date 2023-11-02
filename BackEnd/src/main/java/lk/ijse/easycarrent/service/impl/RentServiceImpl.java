@@ -58,7 +58,7 @@ public class RentServiceImpl implements RentService {
 
             for (RentDetails rentDetails : rent.getRentDetails()) {
                 x = new Random().nextInt(drivers.size());
-                rentDetails.setDriverID(drivers.get(x).getUserId());
+                rentDetails.setDriverID(drivers.get(x).getUser_Id());
                 Car car = carRepo.findById(rentDetails.getCarID()).get();
                 car.setVehicleAvailabilityType(UNAVAILABLE);
                 carRepo.save(car);

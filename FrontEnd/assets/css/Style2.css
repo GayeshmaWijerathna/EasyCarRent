@@ -395,7 +395,7 @@ h6 {
     z-index: 997;
     height: 60px;
     box-shadow: 0 2px 20px rgba(1, 41, 112, 0.1);
-    background-color: #fff;
+    background-color: #acffd1;
     padding-left: 20px;
     /* Toggle Sidebar Button */
     /* Search Bar */
@@ -653,7 +653,7 @@ form .btn {
     scrollbar-width: thin;
     scrollbar-color: #aab7cf transparent;
     box-shadow: 0 0 20px rgba(1, 41, 112, 0.1);
-    background-color: #fff;
+    background-color: #acffd1;
 }
 
 @media (max-width: 1199px) {
@@ -755,7 +755,7 @@ form .btn {
 }
 
 .sidebar-nav .nav-link:hover i {
-    color: #4154f1;
+    color: #e70d25;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -945,16 +945,39 @@ form .btn {
     border: none;
     border-radius: 7px;
 }
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1200;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /*background-color: black;*/
+}
 
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
 .modal-title{
     font-weight: bolder;
     color: #4b7bec;
     font-family:"Open Sans", sans-serif;
 }
-
+/*
 .modal-content{
+    z-index: 1051;
     border-radius: 20px;
-}
+}*/
 
 .dashboard .activity .activity-item .activity-badge {
     margin-top: 3px;

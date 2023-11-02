@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <!-- Template Dashboard CSS File -->
-    <link rel="stylesheet" href="../assets/css/Style.css">
-<!--    <link rel="stylesheet" href="../assets/css/Style2.css">-->
+<!--    <link rel="stylesheet" href="../assets/css/Style.css">-->
+    <link rel="stylesheet" href="../assets/css/Style2.css">
     <link rel="stylesheet" href="../assets/css/Dashboard.css">
 
 </head>
@@ -555,7 +555,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!-- Template Dashboard Main JS File -->
-<script src="../assets/js/js1.js"></script>
+<script src="../assets/js/Dashboard.js"></script>
 
 <!-- Controller JS File -->
 <script src="../controller/regUserDashboardController.js"></script>
@@ -564,59 +564,59 @@
 <script src="../util/alert.js" rel="script"></script>
 <script src="../util/validation.js" rel="script"></script>
 <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
         $("#bookingResponse").css('display', 'block');
         $("#rentDetails").css('display', 'none');
         $("#profileDetails").css('display', 'none');
     });
 
-    $("#userDashboardSection").click(function () {
+        $("#userDashboardSection").click(function () {
         $("#bookingResponse").css('display', 'block');
         $("#rentDetails").css('display', 'none');
         $("#profileDetails").css('display', 'none');
     });
 
-    $("#rentSection").click(function () {
+        $("#rentSection").click(function () {
         $("#bookingResponse").css('display', 'none');
         $("#rentDetails").css('display', 'block');
         $("#profileDetails").css('display', 'none');
     });
 
-    $("#bookingResponseSection").click(function () {
+        $("#bookingResponseSection").click(function () {
         $("#bookingResponse").css('display', 'block');
         $("#rentDetails").css('display', 'none');
         $("#profileDetails").css('display', 'none');
     });
 
-    $("#myDetailsSection,#userDetails,#userDetailss").click(function () {
+        $("#myDetailsSection,#userDetails,#userDetailss").click(function () {
         $("#bookingResponse").css('display', 'none');
         $("#rentDetails").css('display', 'none');
         $("#profileDetails").css('display', 'block');
     });
-    <!-- Initialize Swiper -->
-    const progressCircle = document.querySelector(".autoplay-progress svg");
-    const progressContent = document.querySelector(".autoplay-progress span");
-    var swiper = new Swiper(".mySwiper", {
+        <!-- Initialize Swiper -->
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
-        },
+        delay: 2500,
+        disableOnInteraction: false
+    },
         pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
+        el: ".swiper-pagination",
+        clickable: true
+    },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
         on: {
-            autoplayTimeLeft(s, time, progress) {
-                progressCircle.style.setProperty("--progress", 1 - progress);
-                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-            }
-        }
+        autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", 1 - progress);
+        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+    }
     });
 </script>
 </body>

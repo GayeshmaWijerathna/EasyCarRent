@@ -14,8 +14,8 @@ import javax.persistence.Embeddable;
 @Data
 @ToString
 public class ImageDTO {
-    private MultipartFile frontView;
-    private MultipartFile backView;
-    private MultipartFile sideView;
+    private MultipartFile front_View;
+    private MultipartFile back_View;
+    private MultipartFile side_View;
     private MultipartFile interior;
 }

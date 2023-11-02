@@ -1,5 +1,9 @@
 
-let carBaseUrl = "http://localhost:8080/Back_End/";
+let carBaseUrl = "http://localhost:8080/Back_End_war/";
+
+function setFocus() {
+    document.getElementById("home").focus();
+}
 
 loadAllCars();
 

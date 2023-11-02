@@ -15,18 +15,19 @@ import javax.persistence.*;
 @ToString
 public class Reg_User {
     @Id
-    private String userId;
+    private String user_Id;
 
     @Embedded
     private Name name;
-    private String contactNo;
+    private String contact_No;
     private String address;
     private String email;
     private String nic;
-    private String licenseNo;
-    private String nicImg;
-    private String licenseImg;
+    private String license_No;
+    private String nic_Img;
+    private String license_Img;
 
     @OneToOne(cascade = CascadeType.ALL)
     private User user;
+
 }

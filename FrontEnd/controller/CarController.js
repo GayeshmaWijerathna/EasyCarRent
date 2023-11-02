@@ -1,5 +1,5 @@
 
-let carBaseUrl = "http://localhost:8080/Back_End/";
+let carBaseUrl = "http://localhost:8080/Back_End_war/";
 loadAllCars();
 
 $("#btnSaveCar").attr('disabled', true);
@@ -137,7 +137,7 @@ $("#search_Id").on("keypress", function (event) {
         var search = $("#search_Id").val();
         $("#carTable").empty();
         $.ajax({
-            url: carBaseUrl + "car/searchCar/?carId=" + search,
+            url: carBaseUrl + "car/searchCar/?car_Id=" + search,
             method: "GET",
             contentType: "application/json",
             dataType: "json",
@@ -266,7 +266,7 @@ const regExFuelType = /^[A-z ]{3,20}$/;
 const regExDailyRate = /^[0-9 ]{1,20}$/;
 const regExMonthlyRate = /^[0-9 ]{1,20}$/;
 const regExKM = /^[0-9 ]{1,4}$/;
-const regExRegNumber = /^[A-Z]{3}-?\d{3}|^\d{3}-?[A-Z]{3}$/;
+const regExRegNumber = /^[A-Z]{2,3}-?\d{3}|^\d{3}-?[A-Z]{3}$/;
 const regExMileage = /^[0-9 ]{1,4}$/;
 const regExColor = /^[A-z ]{3,20}$/;
 

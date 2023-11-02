@@ -15,11 +15,11 @@ import javax.persistence.*;
 @ToString
 public class Admin {
     @Id
-    private String userId;
+    private String user_Id;
 
     @Embedded
     private Name name;
-    private String contactNo;
+    private String contact_No;
     private String address;
     private String email;
     private String nic;

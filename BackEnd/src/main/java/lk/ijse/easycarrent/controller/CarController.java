@@ -25,7 +25,8 @@ public class CarController {
     @PostMapping
     public ResponseUtil saveCar(@ModelAttribute CarDTO dto, @ModelAttribute Rate rate, @ModelAttribute ImageDTO image) {
         dto.setImage(image);
-        dto.setRentDurationPrice(rate);
+        dto.setRent_Duration_Price(rate);
+        System.out.println(dto);
         service.saveCar(dto);
         return new ResponseUtil("OK", "Successfully Registered!", null);
     }
@@ -34,9 +35,9 @@ public class CarController {
     @PostMapping(path = "/update")
     public ResponseUtil updateCar(@ModelAttribute CarDTO dto, @ModelAttribute Rate rate, @ModelAttribute ImageDTO image){
         dto.setImage(image);
-        dto.setRentDurationPrice(rate);
+        dto.setRent_Duration_Price(rate);
         service.saveCar(dto);
-        return new ResponseUtil("OK", "Successfully Updated! : " + dto.getCarId(), null);
+        return new ResponseUtil("OK", "Successfully Updated! : " + dto.getCar_Id(), null);
     }
 
 
@@ -60,9 +61,9 @@ public class CarController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/searchCar", params = {"carId"})
-    public Car searchCusId(String carId) {
-        return service.searchCarId(carId);
+    @GetMapping(path = "/searchCar", params = {"car_Id"})
+    public Car searchCusId(String car_Id) {
+        return service.searchCarId(car_Id);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
@@ -96,15 +97,15 @@ public class CarController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/filterCarDetails", params = {"categoryType", "fuelType"})
-    public ArrayList<CarDTO> getFilerData(@RequestParam String categoryType, @RequestParam String fuelType) {
-        return service.getFilerData(categoryType, fuelType);
+    @GetMapping(path = "/filterCarDetails", params = {"category_type", "fuel_Type"})
+    public ArrayList<CarDTO> getFilerData(@RequestParam String category_type, @RequestParam String fuel_Type) {
+        return service.getFilerData(category_type, fuel_Type);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/filterDetails", params = {"name", "fuelType","type", "transmissionType"})
-    public ArrayList<CarDTO> filterCarDetails(@RequestParam String name, @RequestParam String fuelType,@RequestParam String type, @RequestParam String transmissionType) {
-        return service.filterCarDetails(name, fuelType,type,transmissionType);
+    @GetMapping(path = "/filterDetails", params = {"name", "fuel_Type","type", "transmission_Type"})
+    public ArrayList<CarDTO> filterCarDetails(@RequestParam String name, @RequestParam String fuel_Type,@RequestParam String type, @RequestParam String transmission_Type) {
+        return service.filterCarDetails(name, fuel_Type,type,transmission_Type);
     }
 
 

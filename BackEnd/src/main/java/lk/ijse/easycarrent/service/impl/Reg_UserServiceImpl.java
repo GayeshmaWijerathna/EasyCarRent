@@ -30,8 +30,8 @@ public class Reg_UserServiceImpl implements Reg_UserService {
     @Override
     public void saveUser(RegUserDTO dto) {
 
-        Reg_User regUser = new Reg_User(dto.getUserId(), dto.getName(), dto.getContactNo(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicenseNo(), "", "", new User(dto.getUser().getUserId(), dto.getUser().getRoleType(), dto.getUser().getUserName(), dto.getUser().getPassword()));
-        if (repo.existsById(dto.getUserId()))
+        Reg_User regUser = new Reg_User(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicense_No(), "", "", new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
+        if (repo.existsById(dto.getUser_Id()))
             throw new RuntimeException("User Already Exist. Please Enter New ID..!");
 
         try {
@@ -41,11 +41,11 @@ public class Reg_UserServiceImpl implements Reg_UserService {
             System.out.println(projectPath);
             uploadsDir.mkdir();
 
-            dto.getNicImg().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getNicImg().getOriginalFilename()));
-            dto.getLicenseImg().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicenseImg().getOriginalFilename()));
+            dto.getNic_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getNic_Img().getOriginalFilename()));
+            dto.getLicense_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicense_Img().getOriginalFilename()));
 
-            regUser.setNicImg("uploads/" + dto.getNicImg().getOriginalFilename());
-            regUser.setLicenseImg("uploads/" + dto.getLicenseImg().getOriginalFilename());
+            regUser.setNic_Img("uploads/" + dto.getNic_Img().getOriginalFilename());
+            regUser.setLicense_Img("uploads/" + dto.getLicense_Img().getOriginalFilename());
 
 
         } catch (IOException | URISyntaxException e) {
@@ -59,8 +59,8 @@ public class Reg_UserServiceImpl implements Reg_UserService {
     @Override
     public void updateUser(RegUserDTO dto) {
 
-        Reg_User regUser = new Reg_User(dto.getUserId(), dto.getName(), dto.getContactNo(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicenseNo(), "", "", new User(dto.getUser().getUserId(), dto.getUser().getRoleType(), dto.getUser().getUserName(), dto.getUser().getPassword()));
-        if (!repo.existsById(dto.getUserId())) {
+        Reg_User regUser = new Reg_User(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicense_No(), "", "", new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
+        if (!repo.existsById(dto.getUser_Id())) {
             throw new RuntimeException("User Not Exist. Please Enter Valid ID..!");
         }
 
@@ -71,18 +71,18 @@ public class Reg_UserServiceImpl implements Reg_UserService {
             System.out.println(projectPath);
             uploadsDir.mkdir();
 
-            dto.getNicImg().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getNicImg().getOriginalFilename()));
-            dto.getLicenseImg().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicenseImg().getOriginalFilename()));
+            dto.getNic_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getNic_Img().getOriginalFilename()));
+            dto.getLicense_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicense_Img().getOriginalFilename()));
 
-            regUser.setNicImg("uploads/" + dto.getNicImg().getOriginalFilename());
-            regUser.setLicenseImg("uploads/" + dto.getLicenseImg().getOriginalFilename());
+            regUser.setNic_Img("uploads/" + dto.getNic_Img().getOriginalFilename());
+            regUser.setLicense_Img("uploads/" + dto.getLicense_Img().getOriginalFilename());
 
 
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
         System.out.println(regUser);
-        regUser.getUser().setRoleType(RoleType.REGISTERED_USER);
+        regUser.getUser().setRole_Type(RoleType.REGISTERED_USER);
         repo.save(regUser);
 
     }

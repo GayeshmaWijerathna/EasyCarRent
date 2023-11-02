@@ -1,5 +1,6 @@
 
-let userBaseUrl = "http://localhost:8080/Back_End/";
+let userBaseUrl = "http://localhost:8080/Back_End_war/";
+
 loadAllRegUsers();
 $("#btnSaveCustomer").attr('disabled', true);
 $("#btnUpdateCustomer").attr('disabled', true);
@@ -21,10 +22,12 @@ $("#btnSaveCustomer").click(function () {
             saveUpdateAlert("User", res.message);
             loadAllRegUsers();
         },
-        error: function (error) {
+    error: function (error) {
             unSuccessUpdateAlert("User", JSON.parse(error.responseText).message);
         }
     });
+    setTextFieldValues("", "", "", "", "", "", "", "", "", "", "");
+
 });
 
 
@@ -59,10 +62,10 @@ function generateCustomerID() {
 /**
  * clear input fields Values Method
  * */
-function setTextFieldValues(firstName, lastName, contactNo, address, email, nic, license_No, nic_Img, license_Img, user_Name, password) {
+function setTextFieldValues(firstName, lastName, contact_No, address, email, nic, license_No, nic_Img, license_Img, user_Name, password) {
     $("#firstName").val(firstName);
     $("#lastName").val(lastName);
-    $("#contact_No").val(contactNo);
+    $("#contact_No").val(contact_No);
     $("#address").val(address);
     $("#email").val(email);
     $("#nic").val(nic);
@@ -123,7 +126,7 @@ $("#search_Id").on("keypress", function (event) {
         var search = $("#search_Id").val();
         $("#customerTable").empty();
         $.ajax({
-            url: userBaseUrl + "reg_User/searchCustomer/?cusId="+ search,
+            url: userBaseUrl + "reg_User/searchCustomer/?cus_Id="+ search,
             method: "GET",
             contentType: "application/json",
             dataType: "json",
@@ -211,6 +214,7 @@ $("#btnUpdateCustomer").click(function () {
             unSuccessUpdateAlert("User", JSON.parse(error.responseText).message);
         }
     });
+    setTextFieldValues("", "", "", "", "", "", "", "", "", "", "");
 });
 
 /**
@@ -237,7 +241,7 @@ $("#firstName").focus();
 const regExFirstName = /^[A-z ]{3,20}$/;
 const regExLastName = /^[A-z ]{3,20}$/;
 const regExContactNum = /^(07(0|1|2|4|5|6|7|8)[0-9]{7})$/;
-const regExCusAddress = /^[A-z0-9/ ]{4,30}$/;
+const regExCusAddress = /^[A-z0-9/,. ]{4,40}$/;
 const regExEmailCusAddress = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regExNIC = /^([0-9]{12}|[0-9V]{10})$/;
 const regExDrivingNIC = /^[A-Z0-9-]+$/;

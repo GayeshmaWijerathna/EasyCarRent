@@ -1,5 +1,5 @@
 
-let driverBaseUrl = "http://localhost:8080/Back_End/";
+let driverBaseUrl = "http://localhost:8080/Back_End_war/";
 loadAllDrivers();
 
 $("#btnSaveDriver").attr('disabled', true);
@@ -28,6 +28,7 @@ $("#btnSaveDriver").click(function () {
             unSuccessUpdateAlert("Driver", JSON.parse(error.responseText).message);
         }
     });
+    setTextFieldValuesD("", "", "", "", "", "", "", "", "", "", "");
 });
 
 /**
@@ -217,6 +218,7 @@ $("#btnUpdateDriver").click(function () {
             unSuccessUpdateAlert("Driver", JSON.parse(error.responseText).message);
         }
     });
+    setTextFieldValuesD("", "", "", "", "", "", "", "", "", "", "");
 });
 
 
@@ -243,7 +245,7 @@ $("#firstName").focus();
 const regExFirstName = /^[A-z ]{3,20}$/;
 const regExLastName = /^[A-z ]{3,20}$/;
 const regExContactNum = /^(07(0|1|2|4|5|6|7|8)[0-9]{7})$/;
-const regExCusAddress = /^[A-z0-9/ ]{4,30}$/;
+const regExCusAddress = /^[A-z0-9/,. ]{4,40}$/;
 const regExEmailCusAddress = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regExNIC = /^([0-9]{12}|[0-9V]{10})$/;
 const regExDrivingNIC = /^[A-Z0-9-]+$/;

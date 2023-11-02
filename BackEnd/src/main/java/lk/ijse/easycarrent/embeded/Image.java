@@ -13,8 +13,8 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @ToString
 public class Image {
-    private String frontView;
-    private String backView;
-    private String sideView;
+    private String front_View;
+    private String back_View;
+    private String side_View;
     private String interior;
 }

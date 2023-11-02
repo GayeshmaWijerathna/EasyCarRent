@@ -15,11 +15,8 @@
     <!--Custom styles-->
     <link href="../assets/vendor/styleslog/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/loginCss.css">
+    <link href="../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.css" rel="stylesheet">
 
-    <!--    <script src="../assets/js/js1.js"></script>-->
-<!--    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </head>
@@ -36,7 +33,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form>
+                <form class="user m-2 p-3" id="loginForm">
                     <div class="form-group">
                         <select class="form-control" id="role_Type" name="role_Type" style="border-radius: 30px;height: 3.5em">
                             <option value="RoleType">Choose Role</option>
@@ -46,25 +43,26 @@
                         </select>
                     </div>
 
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="username">
+                    <div class="form-group mt-4">
 
-                    </div>
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                        </div>
-                        <input type="password" class="form-control" placeholder="password">
-                    </div>
-                    <div class="row align-items-center remember">
-                        <input type="checkbox">Remember Me
+                        <input type="text" class="form-control form-control-user"
+                               id="user_Name" aria-describedby="emailHelp"
+                               placeholder="Enter User Name...">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Login" class="btn float-right login_btn">
+                        <input type="password" class="form-control form-control-user"
+                               id="password" placeholder="Password">
                     </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox small">
+                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                            <label class="custom-control-label" for="customCheck">Remember
+                                Me</label>
+                        </div>
+                    </div>
+                        <button id="btnLogin" type="button" class="btn btn-primary btn-user btn-block">
+                            Login
+                        </button>
                 </form>
             </div>
             <div class="card-footer">
@@ -78,6 +76,15 @@
         </div>
     </div>
 </div>
+
+<script src="../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/jQuery/jquery-3.6.1.min.js "></script>
+<script rel="script" src="../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <script src="../controller/LoginController.js"></script>
 </body>

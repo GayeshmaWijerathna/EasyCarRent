@@ -29,9 +29,9 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public void saveDriver(DriverDTO dto) {
 
-        Driver driver = new Driver(dto.getUserId(), dto.getName(), dto.getContactNo(), dto.getAddress(), dto.getEmail(), dto.getNicNo(), dto.getLicenseNo(), "", dto.getDriverAvailability(), new User(dto.getUser().getUserId(), dto.getUser().getRoleType(), dto.getUser().getUserName(), dto.getUser().getPassword()));
+        Driver driver = new Driver(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic_No(), dto.getLicense_No(), "", dto.getDriverAvailability(), new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
         System.out.println(driver);
-        if (repo.existsById(dto.getUserId()))
+        if (repo.existsById(dto.getUser_Id()))
             throw new RuntimeException("Driver Already Exist. Please enter another id..!");
 
         try {
@@ -41,9 +41,9 @@ public class DriverServiceImpl implements DriverService {
             System.out.println(projectPath);
             uploadsDir.mkdir();
 
-            dto.getLicenseImg().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicenseImg().getOriginalFilename()));
+            dto.getLicense_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicense_Img().getOriginalFilename()));
 
-            driver.setLicenseImg("uploads/" + dto.getLicenseImg().getOriginalFilename());
+            driver.setLicense_Img("uploads/" + dto.getLicense_Img().getOriginalFilename());
 
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
@@ -56,9 +56,9 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public void updateDriver(DriverDTO dto) {
 
-        Driver driver = new Driver(dto.getUserId(), dto.getName(), dto.getContactNo(), dto.getAddress(), dto.getEmail(), dto.getNicNo(), dto.getLicenseNo(), "", dto.getDriverAvailability(), new User(dto.getUser().getUserId(), dto.getUser().getRoleType(), dto.getUser().getUserName(), dto.getUser().getPassword()));
+        Driver driver = new Driver(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic_No(), dto.getLicense_No(), "", dto.getDriverAvailability(), new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
         System.out.println(driver);
-        if (!repo.existsById(dto.getUserId())) {
+        if (!repo.existsById(dto.getUser_Id())) {
             throw new RuntimeException("Driver Not Exist. Please enter Valid id..!");
         }
 
@@ -68,9 +68,9 @@ public class DriverServiceImpl implements DriverService {
             System.out.println(projectPath);
             uploadsDir.mkdir();
 
-            dto.getLicenseImg().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicenseImg().getOriginalFilename()));
+            dto.getLicense_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicense_Img().getOriginalFilename()));
 
-            driver.setLicenseImg("uploads/" + dto.getLicenseImg().getOriginalFilename());
+            driver.setLicense_Img("uploads/" + dto.getLicense_Img().getOriginalFilename());
 
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);

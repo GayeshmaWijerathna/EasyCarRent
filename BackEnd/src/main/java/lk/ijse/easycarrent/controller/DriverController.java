@@ -33,7 +33,7 @@ public class DriverController {
         driverDTO.setUser(userDTO);
         driverDTO.setName(name);
         service.updateDriver(driverDTO);
-        return new ResponseUtil("OK", "Successfully Updated ! :" + driverDTO.getUserId(), null);
+        return new ResponseUtil("OK", "Successfully Updated ! :" + driverDTO.getUser_Id(), null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)

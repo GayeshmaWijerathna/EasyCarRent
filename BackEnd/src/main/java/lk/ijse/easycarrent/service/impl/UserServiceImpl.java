@@ -30,6 +30,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO getRegUsers(String username, String password) {
-        return mapper.map(repo.findUserByUserNameAndPassword(username, password), UserDTO.class);
+        return mapper.map(repo.findUserByUser_NameAndPassword(username, password), UserDTO.class);
     }
 }

@@ -1,4 +1,5 @@
-let baseUrlLogin = "http://localhost:8080/Back_End/";
+let baseUrlLogin = "http://localhost:8080/Back_End_war/";
+
 
 
 /**
@@ -22,6 +23,7 @@ function login() {
         success: function (res) {
             for (var login of res.data) {
                 if (loginRole_Type === login.role_Type && loginUserName === login.user_Name && loginPassword === login.password) {
+
                     if (loginRole_Type === "DRIVER" && loginUserName === login.user_Name && loginPassword === login.password) {
                         $.ajax({
                             url: baseUrlLogin + "loginForm/?username=" + loginUserName + "&password=" + loginPassword,
@@ -31,6 +33,7 @@ function login() {
                             }
                         })
                         window.location.href = 'driverDashboard.html';
+
                     } else if (loginRole_Type === "REGISTERED_USER" && loginUserName === login.user_Name && loginPassword === login.password) {
                         $.ajax({
                             url: baseUrlLogin + "loginForm/?username=" + loginUserName + "&password=" + loginPassword,
@@ -38,8 +41,12 @@ function login() {
                             method:"get",
                             success:function (res1) {
                             }
-                        });
-                        window.location.href = 'reg_UserDashboard.html';
+                        })
+                        window.location.href = 'registeredUserDashBoard.html';
+
+                    } else if (loginRole_Type === "ADMIN" && loginUserName === "Admin" && loginPassword === "Admin123")  {
+                        window.location.href = 'adminDashboard.html';
+
                     } else if (loginRole_Type === "ADMIN" && loginUserName === login.user_Name && loginPassword === login.password) {
                         window.location.href = 'adminDashboard.html';
                     }

@@ -11,9 +11,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class AdminDTO {
-    private String userId;
+    private String user_Id;
     private Name name;
-    private String contactNo;
+    private String contact_No;
     private String address;
     private String email;
     private String nic;

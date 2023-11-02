@@ -1,6 +1,6 @@
 
 
-let dashboard = "http://localhost:8080/Back_End/";
+let dashboard = "http://localhost:8080/Back_End_war/";
 
 /**
  * Car Count

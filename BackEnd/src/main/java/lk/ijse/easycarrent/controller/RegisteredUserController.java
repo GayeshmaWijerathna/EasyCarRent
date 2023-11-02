@@ -34,11 +34,11 @@ public class RegisteredUserController {
     public ResponseUtil updateUser(@ModelAttribute RegUserDTO regUserDTO, @ModelAttribute UserDTO user, @ModelAttribute Name name) {
         regUserDTO.setName(name);
         regUserDTO.setUser(user);
-        System.out.println(user);
+      /*  System.out.println(user);
         System.out.println(name);
-        System.out.println(regUserDTO);
+        System.out.println(regUserDTO);*/
         service.updateUser(regUserDTO);
-        return new ResponseUtil("OK", "Successfully Updated. :" + regUserDTO.getUserId(), null);
+        return new ResponseUtil("OK", "Successfully Updated. :" + regUserDTO.getUser_Id(), null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
@@ -56,8 +56,7 @@ public class RegisteredUserController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @GetMapping(path = "/reg_UserIdGenerate")
-    public @ResponseBody
-    CustomDTO customerIdGenerate() {
+    public @ResponseBody CustomDTO customerIdGenerate() {
         return service.userIdGenerate();
     }
 
@@ -72,5 +71,4 @@ public class RegisteredUserController {
     public @ResponseBody CustomDTO getSumCustomer() {
         return service.getSumUser();
     }
-
 }

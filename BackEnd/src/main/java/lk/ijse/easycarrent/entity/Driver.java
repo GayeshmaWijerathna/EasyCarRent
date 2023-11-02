@@ -16,19 +16,21 @@ import javax.persistence.*;
 @ToString
 public class Driver {
     @Id
-    private String userId;
+    private String user_Id;
+
     @Embedded
     private Name name;
-    private String contactNo;
+    private String contact_No;
     private String address;
     private String email;
-    private String nicNo;
-    private String licenseNo;
-    private String licenseImg;
+    private String nic_No;
+    private String license_No;
+    private String license_Img;
     @Enumerated(EnumType.STRING)
     private AvailabilityType driverAvailability;
 
     @OneToOne(cascade = CascadeType.ALL)
+
     private User user;
 
 }
