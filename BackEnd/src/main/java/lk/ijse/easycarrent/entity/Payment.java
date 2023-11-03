@@ -21,7 +21,7 @@ public class Payment {
     private String payId;
 
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "rentID", referencedColumnName = "rentID", nullable = false)
+    @JoinColumn(name = "rentID", referencedColumnName = "rentId", nullable = false)
     private Rent rentID;
     private PaymentType paymentType;
     private LocalDate date;

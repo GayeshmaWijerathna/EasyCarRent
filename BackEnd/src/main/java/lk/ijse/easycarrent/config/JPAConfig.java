@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
-@EnableTransactionManagement
+@EnableTransactionManagement //AOP
 @PropertySource("classpath:application.properties")
 @EnableJpaRepositories(basePackages = "lk.ijse.easycarrent.repo")
 public class JPAConfig {

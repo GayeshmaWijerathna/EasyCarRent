@@ -23,6 +23,7 @@
     <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Dashboard CSS File -->
     <link href="../../assets/css/Dashboard.css" rel="stylesheet">
@@ -192,17 +193,17 @@
             </li><!-- End Messages Nav -->
 
             <li class="nav-item dropdown pe-3">
-
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="../../assets/images/Users/dineth.jpeg" alt="Profile" class="rounded-circle">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">Dineth Panditha</span>
+                    <img src="../../assets/images/Users/Admin.png" alt="Profile" class="rounded-circle">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
                 </a><!-- End Profile Iamge Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6>Dineth Panditha</h6>
-                        <span>Manager</span>
+                        <h6>Administrator</h6>
+                        <span>User_Admin</span>
                     </li>
+
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -371,6 +372,7 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody id="dailyIncomeTable"></tbody>
+
                                             </table>
                                         </div>
                                     </div>
@@ -385,7 +387,24 @@
                                 <h5 class="card-title">Daily Income</h5>
 
                                 <!-- Line Chart -->
-                                <div id="dailyIncomeChart" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+                                <div id="dailyIncomeChart" style="height: 370px; max-width: 920px; margin: 0px auto;">
+                                    <div class="container mt-5">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="card">
+                                                    <div class="card-header">Admin Income Chart</div>
+                                                    <div class="card-body">
+                                                        <canvas id="incomeChart"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <!-- Other admin panel components can go here -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                                 <!-- End Line CHart -->
 
                             </div>
@@ -507,6 +526,9 @@
 
 <!-- Template Dashboard Main JS File -->
 <script src="../../assets/js/js1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <!-- Controller JS File -->
 <script src="../../controller/IncomeReportController.js"></script>

@@ -109,3 +109,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+    // Sample data for the chart (replace this with your actual data)
+    var incomeData = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [{
+    label: 'Income',
+    data: [2000, 3000, 2500, 4000, 3500, 5000],
+    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+    borderColor: 'rgba(75, 192, 192, 1)',
+    borderWidth: 1
+}]
+};
+
+    // Get the chart canvas element
+    var ctx = document.getElementById('incomeChart').getContext('2d');
+
+    // Initialize the chart using Chart.js
+    var incomeChart = new Chart(ctx, {
+    type: 'bar', // You can change the chart type (bar, line, pie, etc.)
+    data: incomeData,
+    options: {
+    scales: {
+    y: {
+    beginAtZero: true
+}
+}
+}
+});
+
