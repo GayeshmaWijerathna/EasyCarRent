@@ -24,5 +24,6 @@ public interface RentService {
     void bookingConform(String rentID, String driverId);
 
     void bookingReject(String rentID, String driverId);
+
     RentDTO searchId(String id);
 }
