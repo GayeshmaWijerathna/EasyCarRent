@@ -36,7 +36,7 @@ public class CarController {
     public ResponseUtil updateCar(@ModelAttribute CarDTO dto, @ModelAttribute Rate rate, @ModelAttribute ImageDTO image){
         dto.setImage(image);
         dto.setRent_Duration_Price(rate);
-        service.saveCar(dto);
+        service.updateCar(dto);
         return new ResponseUtil("OK", "Successfully Updated! : " + dto.getCar_Id(), null);
     }
 

@@ -34,9 +34,9 @@ public class RegisteredUserController {
     public ResponseUtil updateUser(@ModelAttribute RegUserDTO regUserDTO, @ModelAttribute UserDTO user, @ModelAttribute Name name) {
         regUserDTO.setName(name);
         regUserDTO.setUser(user);
-      /*  System.out.println(user);
+        System.out.println(user);
         System.out.println(name);
-        System.out.println(regUserDTO);*/
+        System.out.println(regUserDTO);
         service.updateUser(regUserDTO);
         return new ResponseUtil("OK", "Successfully Updated. :" + regUserDTO.getUser_Id(), null);
     }
