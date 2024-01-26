@@ -148,7 +148,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-    background: #acffd1;
+    background: #88a294;
     transition: all 0.5s;
     z-index: 997;
     padding: 9px 0;
@@ -211,7 +211,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
     padding: 0;
@@ -295,7 +295,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
     color: #37423b;
@@ -1654,7 +1654,7 @@ img.hover-shadow {
 
     background: -webkit-linear-gradient(to right, #642c2c, #432021, #0F2027);
 
-    background: linear-gradient(to right, rgb(5, 150, 82), #047640, #0F2027);
+    background: linear-gradient(to right, rgb(136, 162, 148), #2a2d2d, #0F2027);
     padding: 20px 0;
     color: rgba(255, 255, 255, 0.7);
 }
